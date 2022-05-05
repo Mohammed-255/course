@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+:root {
+    --yellow-color :#fed515;
+    --blue: #0075ff;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* ===================================================start header===================================== */
+
+header {
+    width: 100%;
+    background-color: var(--white);
+    height: 80px;
+    box-shadow: 0 0 10px 0 rgb(29 29 29 / 50%);
+}
+
+header .contaner .logo {
+    margin-right: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+header .contaner {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .contaner nav>ul>li>a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--blue);
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    padding:5px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+header .contaner nav>ul>li>a:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+header .contaner nav>ul>li {
+    list-style: none;
+}
+
+header .contaner nav>ul {
+    display: flex;
+}
+
+header nav {
+    margin-left: 40px;
+    display: flex;
+}
+
+header .contaner .pearant {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    direction: ltr;
+}
+
+header .contaner .pearant span {
+    height: 3px;
+    width: 30px;
+    margin-bottom: 5px;
+    background-color: var(--black);
+    transition: .5s;
+}
+
+header .contaner .pearant span:first-child {
+    width: 100%;
+}
+header .contaner .pearant span:nth-child(2) {
+    width: 70%;
+}
+header .contaner .pearant span:nth-child(3) {
+    width: 100%;
+}
+
+header .pearant:hover span:nth-child(2) {
+    width: 100%;
+}
+
+header .contaner .liner {
+    position: relative;
+}
+
+header .contaner .liner a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: bold;
+    padding: 13px 20px;
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+}
+
+header .contaner .liner a:first-child {
+    margin-top: 0;
+}
+
+header .contaner .liner a:last-child {
+    margin-bottom: 0;
+}
+
+header .contaner .liner a:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+header .contaner .liner .list {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    padding: 7px;
+    top: 55px;
+    left: -5px;
+    width: 169px;
+    z-index: 10000;
+}
+
+header .contaner .liner .list.open {
+    display: block;
+}
+
+header .contaner .liner .list::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent transparent #ddd transparent;
+    top: -40px;
+    left: 0
+}
+
+/* ============================================end header============================================= */
+
+.imgs {
+    width: 100%;
+    height: 450px;
+}
+/* ==================================================================================================== */
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media (max-width: 767px) {
+    header .contaner nav .nav {
+        display: none;
+    }
+    .imgs {
+        height: 300px;
+        font-size: 30px;
+    }
+    header .contaner .logo {
+        margin-right: 50px;
+    }
+    header nav {
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    header .contaner .liner {
+        display: none;
+    }
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 43px;
+    height: 43px;
+    color: white;
+    background-color: #ff9800;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: -100;
+    transition: 1s;
+}
+
+.up.show {
+    opacity: 1;
+    z-index: 100;
+}
+
+.up > i {
+    font-size: 20px;
+}
+
+.up:hover > i {
+    animation: upmove 0.5s;
+}
+
+@keyframes upmove {
+    0% {
+        padding-bottom: 0px;
+    }
+    100% {
+        padding-bottom: 80px;
+        opacity: .1;
+    }
+}
+
+/* ================================================start footer=========================================== */
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #101010;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    gap: 120px;
+    justify-content: center;
+}
+
+footer .container li {
+    list-style: none;
+}
+
+footer .container li i {
+    margin: 10px 20px;
+    transition: .5s;
+}
+
+footer .container li:hover i {
+    padding-right: 15px;
+}
+
+footer .container ul {
+    margin-right: 10px;
+}
+
+footer .container li a {
+    text-decoration: none;
+    color: #ffc20e;
+    font-size: 20px;
+}
+
+footer .container li a:hover {
+    color: white;
+}
+
+footer .container h2 {
+    color: var(--white);
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ffc20e;
+    margin-bottom: 20px;
+    font-size: 33px;
+}
+
+.link {
+    margin-top: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link a {
+    text-decoration: none;
+}
+
+.link .li {
+    width: 50PX;
+    height: 50PX;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-size: 25px;
+    background-color: #3c3c3c;
+}
+
+footer .link .facebook:hover {
+    background-color: #1877f2;
+}
+
+footer .link .twitter:hover {
+    background-color: #1da1f2;
+}
+footer .link .instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+footer .link .snapchat:hover {
+    background-color: #d3d018;
+}
+footer .link .whtsapp:hover {
+    background-color: #25d366;
+}
+
+
+
+/* ==============================================end footer======================================================== */

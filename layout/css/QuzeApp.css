@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.page-title {
+    background-color: #efefef; 
+    box-shadow: 0 0 10px #afafaf;
+    padding: 30px; 
+    color: #0075ff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.quiz-app {
+    width: 600px;
+    margin: 20px auto;
+}
+
+ul li {
+    list-style: none;
+    background-color: #efefef;
+    padding: 20px;
+    box-shadow: 0 0 10px #afafaf;
+    width: 100%;
+}
+
+ul li:not(:last-child) {
+    margin-bottom: 90px;
+}
+
+ul li:last-child {
+    margin-bottom: 40px;
+}
+
+ul li .title {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+ul li .title2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+ul li .title2 > div {
+    display: flex;
+    margin-top: 10px;
+}
+
+ul li .title2 > div > div {
+    width: 50%;
+    border: 1px solid black;
+}
+
+ul li .title2 > div > div > div {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+ul li .title span.parent, 
+ul li .title2 span.parent {
+    display: flex;
+    align-items: center;
+}
+
+ul li .title span.number, 
+ul li .title2 span.number {
+    margin: 0 8px;
+}
+
+ul li .title span.firstnumber,
+ul li .title2 span.firstnumber {
+    padding: 0 20px 0 10px;
+    margin: 15px 0 7px;
+    text-align: center;
+    position: relative;
+}
+ul li .title span.sconednumber,
+ul li .title2 span.sconednumber {
+    padding: 0 20px 0 10px;
+    margin: 15px 0 7px;
+    text-align: center;
+    position: relative;
+}
+
+ul li .title .parentdivision,
+ul li .title2 .parentdivision {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px;
+}
+
+ul li .title span.root,
+ul li .title2 span.root {
+    position: relative;
+    border-top: 2px solid black;
+    padding: 0 10px;
+    margin-right: 20px;
+}
+
+ul li .title span.integerExponents,
+ul li .title2 span.integerExponents,
+ul li .title span.integerExponents2,
+ul li .title2 span.integerExponents2 {
+    position: absolute;
+    top: -5px;
+    transform-origin: 0;
+    font-size: small;
+    transform: translateX(50%);
+}
+
+ul li .title span.integerExponents,
+ul li .title2 span.integerExponents {
+    right: -17px;
+}
+
+ul li .title span.integerExponents2,
+ul li .title2 span.integerExponents2 {
+    left: -8px;
+}
+
+ul li .title span.root::after,
+ul li .title2 span.root::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -7px;
+    width: 2px;
+    height: 90%;
+    background-color: black;
+    transform: rotate(-25deg);
+}
+ul li .title span.root::before,
+ul li .title2 span.root::before {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    right: -17px;
+    width: 2px;
+    height: 40%;
+    background-color: black;
+    transform: rotate(20deg);
+}
+
+ul li .title span.division,
+ul li .title2 span.division {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+ul li .ans {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li .answer {
+    background-color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+
+ul li .answer{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+ul li .answer label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+ul li .answer input[type="radio"]:checked + label {
+    color: #0075ff;
+}
+
+ul .image,
+ul .paragraph {
+    padding: 15px;
+    background: #efefef;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px #afafaf;
+}
+
+@media (max-width:767px) {
+    .quiz-app {
+        width: 90%;
+    }
+    .page-title {
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+}
+
+.quiz-app .quizbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.quiz-app button {
+    background-color: #fed515;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border: 2px solid #fed515;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.quiz-app button:hover {
+    background-color: #fed5154f;
+}
+
+
+p {
+    text-align: center;
+}
+
+/* scor */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+    width: 100%;
+    padding: 0 20px 20px;
+}
+
+.container .box {
+    background-color: #0075ff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    width: fit-content;  
+    text-align: center;
+    color: #fff;
+}
+
+.container .box2 {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.container .box3 {
+    font-size: 15px;
+}
+
+.wrongquestion {
+    display: block;
+    border: none;
+    background-color: #0075ff;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 50px auto;
+}
+
+.allquestion {
+    display: block;
+    border: none;
+    background-color: #0075ff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 50px auto;
+}
+
+.link {
+    display: flex;
+    padding: 15px 20px;
+    background-color: #0075ff;
+    width: fit-content;
+    margin: 50px auto;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.timer {
+    display: none;
+}
+
+.countdown {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+.countdown .value-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.countdown svg {
+    width: 126px;
+    height: 126px;
+    transform: rotate(-90deg);
+    background: white;
+    border-radius: 50%;
+}
+.countdown circle {
+    fill: none;
+    stroke: orange;
+    stroke-width: 12px;
+    stroke-dasharray: 345;
+    stroke-dashoffset: 0;
+}
+
+.gifet {
+    text-align: center;
+    color: #46a746;
+    padding-bottom: 35px;
+    font-size: 26px;
+}
+
+.buttonn {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.buttonn button {
+    background-color: #fed515;
+    padding: 20px 25px;
+    border: none;
+    border: 2px solid #fed515;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buttonn button:hover {
+    background-color: #fed5154f;
+}
+
+.buttonn .div {
+    display: none;
+    position: relative;
+}
+
+.buttonn .div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff00;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .buttonn {
+        width: 90%;
+    }
+    .container {
+        gap: 30;
+    }
+}
+
+.rightanswer {
+    background-color: #00ff001c !important;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #01b501 !important;
+    border-radius: 6px;
+}
+.righticon {
+    color: #01b501;
+    font-size: 26px;
+}
+
+.wronganswer {
+    background-color: #ff00001c !important;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ff0000 !important;
+    border-radius: 6px;
+}
+
+.wrongicon {
+    color: #eb0505;
+    font-size: 26px;
+}

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+form.login {
+    width: 300px;
+    margin: 100px auto 200px;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+form.login input {
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.add {
+    width: 300px;
+    margin: 150px auto;
+}
+.add input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+    background-color: #eee;
+    border-radius: 15px;
+    border: none;
+}
+
+.containertable {
+    margin: 100px auto 200px;
+    width: fit-content;
+}
+
+.containerdash {
+    padding: 20px;
+    margin: 100px auto 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+}
+
+.containerdash a {
+    width: 200px;
+    height: 200px;
+    background-color: #0075ff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.table {
+    border-spacing: 0;
+    margin-bottom: 15px;
+    border: 0.2px solid black;
+}
+
+
+.table thead {
+    background-color: #03a9f4;
+    color: #fff;
+}
+
+.table thead tr th {
+    padding: 10px 15px;
+    border: 0.2px solid black;
+}
+
+.table tr td {
+    border: 0.2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #ccc;
+}
+
+.Activate {
+    margin-left: 5px;
+}
+
+.but-red,
+.but-green,
+.but-blue {
+    border-radius: 6px;
+    padding: 0 10px;
+}
+.but-red {
+    background-color: #ff0000d1;
+}
+.but-green {
+    background-color: #2ded2d;
+}
+.but-blue {
+    background-color: #008eff;
+}
